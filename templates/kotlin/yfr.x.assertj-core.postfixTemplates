@@ -1,0 +1,15 @@
+## Templates for assertj ##
+
+## Assert
+
+.aT : assertj-core assertThat
+    ANY                          [org.assertj.core.api.Assertions]     →  org.assertj.core.api.Assertions.assertThat($expr$)
+
+.aET : assertj-core assertEqualTo
+    ANY                          [org.assertj.core.api.Assertions]     →  org.assertj.core.api.Assertions.assertThat($expr$).isEqualTo($other$)$END$
+
+.aTE : assertj-core assertThrowException
+    ANY                          [org.assertj.core.api.Assertions]     →  org.assertj.core.api.Assertions.assertThatThrownBy { $expr$ }.isInstanceOf($other$)$END$
+
+.aNTE : assertj-core assertNotThrowException
+    ANY                          [org.assertj.core.api.Assertions]     →  org.assertj.core.api.Assertions.assertThatCode { $expr$ }.doesNotThrowAnyException()
